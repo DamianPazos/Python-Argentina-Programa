@@ -7,3 +7,10 @@ y que determine si cumple con los requisitos para subir a la atracción.
 Si cumple con al menos una de las condiciones, el programa debe imprimir "¡Puede acceder!" en la pantalla. 
 Si no cumple con ninguna de las condiciones, el programa debe imprimir un mensaje que lo indique.
 '''
+
+age = int(input('Por favor, ingrese la edad: '))
+height = float(input('Por favor ingrese la altura: '))
+if age > 6 or height > 1.50:
+    print('¡Puede acceder!')
+else:
+    print('No cumplis con algun requerimiento')

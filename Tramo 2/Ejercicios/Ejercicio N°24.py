@@ -9,3 +9,15 @@ Si no cumple con alguno de los requisitos, el programa debe imprimir un mensaje 
 Por ejemplo, si no cumple con el requisito de la edad, el programa debe imprimir "Lo siento, eres demasiado joven para acceder." 
 Si no cumple con el requisito de la estatura, el programa debe imprimir "Lo siento, eres demasiado bajo para acceder"
 '''
+
+age = int(input('Por favor, ingrese la edad: '))
+height = float(input('Por favor ingrese la altura: '))
+if age >= 10 and height > 1.60:
+    print('¡Puede acceder!')
+else:
+    if height <= 1.60 and age < 10:
+        print('No cumplis con ninguno de los dos requisitos')
+    if height <= 1.60 and age >= 10:
+        print('No cumplis el requisito de altura')
+    if height > 1.60 and age < 10:
+        print('No cumplis con el requisito de la edad')

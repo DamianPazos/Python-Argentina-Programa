@@ -15,3 +15,22 @@ Obra Social - 999,99
 Sindicato - 999,99
 Sueldo Neto 999,99
 '''
+
+basic_salary = float(input('Ingres el sueldo basico del empleado: $'))
+seniority = int(input('Ingrese la cantidad de años de antiguedad: '))
+marital_status = input('Ingrese el estado civil (S: Soltero / C: Casado): ')
+net_salary = 0
+if marital_status == 'S':
+    marital_status = 'Soltero'
+    net_salary =  (basic_salary + (seniority * 0.05 * basic_salary)) * 0.83 
+elif marital_status == 'C':
+    marital_status = 'Casado'
+    net_salary =  (basic_salary + (seniority * 0.07 * basic_salary)) * 0.83
+print(f'Estado civil: {marital_status}')
+print(f'Sueldo basico: ${basic_salary}')
+print(f'Antiguedad: {seniority} años')
+print('Descuentoss')
+print(f'Jubilacion: ${basic_salary * 0.11} ')
+print(f'Obra Social: ${basic_salary * 0.03}')
+print(f'Sindicato: ${basic_salary * 0.03}')
+print(f'Sueldo neto: ${net_salary}')

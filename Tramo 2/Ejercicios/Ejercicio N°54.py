@@ -6,3 +6,22 @@ Si las mismas son erróneas, se volverán a pedir hasta un máximo de 3 intentos
 la computadora debe mostrar alguno de los siguientes mensajes según sea el caso: "Acceso concedido" o 
 "Se ha bloqueado la cuenta"
 '''
+
+USER = {
+    'password' : '123456',
+    'username' : 'admin'
+}
+check = True
+counter = 0
+while check:
+    username = input('Ingrese su usuario: ')
+    password = input('Ingrese su contraseña: ')
+    if username == USER['username'] and password == USER['password']:
+        print('Acceso concedido')
+        check = False
+    elif counter == 3:
+        print('Se ha bloqueado la cuenta')
+        check = False
+    else:
+        print('Se ha ingresado el usuario o la contraseña incorrecta')
+        counter += 1

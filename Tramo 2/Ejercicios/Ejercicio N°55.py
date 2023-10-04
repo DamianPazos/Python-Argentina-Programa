@@ -4,3 +4,13 @@ Cada cliente indica su número de documento y aguarda a ser atendido,
 cuando finaliza la atención del día se ingresa -1 para indicar que no hay más clientes para ser atendidos. 
 El banco desea saber quién fue el primer cliente atendido y quién fue el último.
 '''
+
+check = True
+queue = []
+while check:
+    dni = int(input('Ingrese su número de documento: '))
+    if dni != -1:
+        queue.append(dni)
+    else:
+        check = False
+print(f'El primer cliente que fue atendido tiene el dni {queue[0]} y el ultimo tiene {queue[-1]}')
